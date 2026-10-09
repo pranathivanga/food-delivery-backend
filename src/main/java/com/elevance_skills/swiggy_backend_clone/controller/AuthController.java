@@ -1,5 +1,6 @@
 package com.elevance_skills.swiggy_backend_clone.controller;
 
+import com.elevance_skills.swiggy_backend_clone.dto.AuthResponse;
 import com.elevance_skills.swiggy_backend_clone.dto.LoginRequest;
 import com.elevance_skills.swiggy_backend_clone.dto.RegisterRequest;
 import com.elevance_skills.swiggy_backend_clone.dto.UserResponse;
@@ -22,14 +23,12 @@ public class AuthController {
     @ResponseStatus(HttpStatus.CREATED)
     public UserResponse register(
             @Valid @RequestBody RegisterRequest request) {
-
         return authService.register(request);
     }
 
     @PostMapping("/login")
-    public UserResponse login(
+    public AuthResponse login(
             @Valid @RequestBody LoginRequest request) {
-
         return authService.login(request);
     }
 }
