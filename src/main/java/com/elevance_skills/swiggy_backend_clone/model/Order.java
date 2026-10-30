@@ -14,7 +14,9 @@ public class Order {
 
     @Id
     private String id;
-
+    private String assignedPartnerId;
+    private String assignedPartnerName;
+    private String deliveryAssignmentStatus = "UNASSIGNED";
     private String userEmail;
     private String restaurantId;
     private List<OrderItem> items = new ArrayList<>();
@@ -33,7 +35,29 @@ public class Order {
     private boolean fraudFlagged;
     private List<String> fraudReasons = new ArrayList<>();
     private String fraudReviewStatus = "NOT_REQUIRED";
+    public String getAssignedPartnerId() {
+        return assignedPartnerId;
+    }
 
+    public void setAssignedPartnerId(String assignedPartnerId) {
+        this.assignedPartnerId = assignedPartnerId;
+    }
+
+    public String getAssignedPartnerName() {
+        return assignedPartnerName;
+    }
+
+    public void setAssignedPartnerName(String assignedPartnerName) {
+        this.assignedPartnerName = assignedPartnerName;
+    }
+
+    public String getDeliveryAssignmentStatus() {
+        return deliveryAssignmentStatus;
+    }
+
+    public void setDeliveryAssignmentStatus(String deliveryAssignmentStatus) {
+        this.deliveryAssignmentStatus = deliveryAssignmentStatus;
+    }
     public Order() {
     }
 
