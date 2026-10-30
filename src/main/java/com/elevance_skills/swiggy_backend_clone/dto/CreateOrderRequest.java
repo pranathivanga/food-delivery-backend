@@ -16,6 +16,8 @@ public class CreateOrderRequest {
     @NotBlank(message = "Restaurant ID is required")
     private String restaurantId;
 
+    private String couponCode;
+
     @NotEmpty(message = "Order must contain at least one item")
     @Valid
     private List<OrderItemRequest> items;
@@ -30,6 +32,10 @@ public class CreateOrderRequest {
     public void setRestaurantId(String restaurantId) {
         this.restaurantId = restaurantId;
     }
+
+    public String getCouponCode() { return couponCode; }
+
+    public void setCouponCode(String couponCode) { this.couponCode = couponCode; }
 
     public List<OrderItemRequest> getItems() {
         return items;

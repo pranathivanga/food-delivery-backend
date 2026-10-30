@@ -14,6 +14,8 @@ public interface OrderRepository
             String userEmail
     );
 
+    List<Order> findByFraudFlaggedTrueOrderByCreatedAtDesc();
+
     Optional<Order> findByIdAndUserEmail(
             String id,
             String userEmail

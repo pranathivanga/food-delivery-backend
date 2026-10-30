@@ -1,5 +1,7 @@
 package com.elevance_skills.swiggy_backend_clone.model;
 
+import java.time.Instant;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,4 +24,8 @@ public class User {
     private String password;
 
     private String role;
+
+    private boolean restricted;
+    private Instant restrictedUntil;
+    private String restrictionReason;
 }

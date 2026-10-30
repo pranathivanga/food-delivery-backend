@@ -28,6 +28,12 @@ public class Order {
     private Instant updatedAt;
     private Instant cancelledAt;
 
+    private String couponCode;
+    private int riskScore;
+    private boolean fraudFlagged;
+    private List<String> fraudReasons = new ArrayList<>();
+    private String fraudReviewStatus = "NOT_REQUIRED";
+
     public Order() {
     }
 
@@ -110,6 +116,17 @@ public class Order {
     public void setUpdatedAt(Instant updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    public String getCouponCode() { return couponCode; }
+    public void setCouponCode(String couponCode) { this.couponCode = couponCode; }
+    public int getRiskScore() { return riskScore; }
+    public void setRiskScore(int riskScore) { this.riskScore = riskScore; }
+    public boolean isFraudFlagged() { return fraudFlagged; }
+    public void setFraudFlagged(boolean fraudFlagged) { this.fraudFlagged = fraudFlagged; }
+    public List<String> getFraudReasons() { return fraudReasons; }
+    public void setFraudReasons(List<String> fraudReasons) { this.fraudReasons = fraudReasons; }
+    public String getFraudReviewStatus() { return fraudReviewStatus; }
+    public void setFraudReviewStatus(String fraudReviewStatus) { this.fraudReviewStatus = fraudReviewStatus; }
 
     public Instant getCancelledAt() {
         return cancelledAt;
