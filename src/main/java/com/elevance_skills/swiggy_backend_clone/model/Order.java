@@ -26,6 +26,7 @@ public class Order {
     private BigDecimal totalAmount = BigDecimal.ZERO;
 
     private String status = "PLACED";
+    private List<OrderStatusEvent> statusHistory = new ArrayList<>();
     private Instant createdAt;
     private Instant updatedAt;
     private Instant cancelledAt;
@@ -158,5 +159,12 @@ public class Order {
 
     public void setCancelledAt(Instant cancelledAt) {
         this.cancelledAt = cancelledAt;
+    }
+    public List<OrderStatusEvent> getStatusHistory() {
+        return statusHistory;
+    }
+
+    public void setStatusHistory(List<OrderStatusEvent> statusHistory) {
+        this.statusHistory = statusHistory;
     }
 }

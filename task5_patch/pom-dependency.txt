@@ -1,6 +1,0 @@
-Add this inside the existing <dependencies> element in pom.xml. Do not replace the entire pom.xml.
-
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-websocket</artifactId>
-</dependency>
